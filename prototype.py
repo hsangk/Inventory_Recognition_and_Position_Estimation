@@ -18,7 +18,7 @@ def get_args_parse():
 
     parser.add_argument('--skip', '-s', default=5, type=int)
     parser.add_argument('--save_video', '-v', action='store_true')
-    directory = os.path.join(os.path.dirname(__file__), '230926-test')
+    directory = os.path.join(os.path.dirname(__file__), 'test')
     parser.add_argument('--root', '-r', default=directory)
 
     return parser
@@ -33,7 +33,7 @@ def main():
     video_folder = os.path.join(args.root, 'video')
 
 
-    save_video = True
+    save_video = False
 
     if save_video:
         os.makedirs(os.path.join(args.root, 'decoded_images'), exist_ok=True)
